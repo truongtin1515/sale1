@@ -1,3 +1,61 @@
+:root {
+  --header-height: 3.5rem; /*56px*/
+
+  /*========== Colors ==========*/
+  /*Color mode HSL(hue, saturation, lightness)*/
+  --hue: 152;
+  --first-color: hsl(var(--hue), 24%, 32%);
+  --first-color-alt: hsl(var(--hue), 24%, 28%);
+  --first-color-light: hsl(var(--hue), 24%, 66%);
+  --first-color-lighten: hsl(var(--hue), 24%, 92%);
+  --title-color: hsl(var(--hue), 4%, 15%);
+  --text-color: hsl(var(--hue), 4%, 35%);
+  --text-color-light: hsl(var(--hue), 4%, 55%);
+  --body-color: hsl(var(--hue), 0%, 100%);
+  --container-color: #FFF;
+
+  /*========== Font and typography ==========*/
+  /*.5rem = 8px | 1rem = 16px ...*/
+  --body-font: 'Poppins', sans-serif;
+  --big-font-size: 2rem;
+  --h1-font-size: 1.5rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1rem;
+  --normal-font-size: .938rem;
+  --small-font-size: .813rem;
+  --smaller-font-size: .75rem;
+
+  /*========== Font weight ==========*/
+  --font-medium: 500;
+  --font-semi-bold: 600;
+
+  /*========== Margenes Bottom ==========*/
+  /*.5rem = 8px | 1rem = 16px ...*/
+  --mb-0-5: .5rem;
+  --mb-0-75: .75rem;
+  --mb-1: 1rem;
+  --mb-1-5: 1.5rem;
+  --mb-2: 2rem;
+  --mb-2-5: 2.5rem;
+
+  /*========== z index ==========*/
+  --z-tooltip: 10;
+  --z-fixed: 100;
+}
+/* Responsive typography */
+@media screen and (min-width: 968px) {
+  :root {
+    --big-font-size: 3.5rem;
+    --h1-font-size: 2.25rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+    --small-font-size: .875rem;
+    --smaller-font-size: .813rem;
+  }
+}
+ 
+
 * {
   box-sizing: border-box;
 }
@@ -177,6 +235,129 @@ display: flex;
   padding:20px;
   font-size: 20px;
  }
- 
-   
+ /*---------------question-----------------------*/
+ .questions{
+  background-color: var(--first-color-lighten);
+}
+
+.questions__container{
+  gap: 1.5rem;
+  padding: 1.5rem 0;
+}
+
+.questions__group{
+  display: grid;
+  row-gap: 1.5rem;
+}
+
+.questions__item{
+  background-color: var(--container-color);
+  border-radius: .25rem;
+}
+
+.questions__item-title{
+  font-size: var(--small-font-size);
+  font-weight: var(--font-medium);
+}
+
+.questions__icon{
+  font-size: 1.25rem;
+  color: var(--title-color);
+}
+
+.questions__description{
+  font-size: var(--smaller-font-size);
+  padding: 0 1.25rem 1.25rem 2.5rem;
+}
+
+.questions__header{
+  display: flex;
+  align-items: center;
+  column-gap: .5rem;
+  padding: .75rem .5rem;
+  cursor: pointer;
+}
+
+.questions__content{
+  overflow: hidden;
+  height: 0;
+}
+
+.questions__item,
+.questions__header,
+.questions__item-title,
+.questions__icon,
+.questions__description,
+.questions__content{
+  transition: .3s;
+}
+
+.questions__item:hover{
+  box-shadow: 0 2px 8px hsla(var(--hue), 4%, 15%, .15);
+}
+
+/*Rotate icon, change color of titles and background*/
+.accordion-open .questions__header,
+.accordion-open .questions__content{
+  background-color: var(--first-color);
+}
+
+.accordion-open .questions__item-title,
+.accordion-open .questions__description,
+.accordion-open .questions__icon{
+  color: #FFF;
+}
+
+.accordion-open .questions__icon{
+  transform: rotate(45deg);
+}
+/*product*/
+.product__img{
+  position: relative;
+  width: 220px;
+  justify-self: center;
+  margin-bottom: var(--mb-0-75);
+  transition: .3s;
+}
+/*=============== REUSABLE CSS CLASSES ===============*/
+.section{
+  padding: 5.5rem 0 1rem;
+}
+
+.section__title,
+.section__title-center{
+  font-size: var(--h2-font-size);
+  margin-bottom: var(--mb-2);
+  line-height: 140%;
+}
+
+.section__title-center{
+  text-align: center;
+}
+
+.container{
+  max-width: 968px;
+  margin-left: var(--mb-1-5);
+  margin-right: var(--mb-1-5);
+}
+
+.grid{
+  display: grid;
+}
+
+.main{
+  overflow: hidden; /*For animation*/
+}
+
+/*=============== HEADER ===============*/
+.header{
+  width: 100%;
+  background-color: var(--body-color);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: var(--z-fixed);
+  transition: .4s; /*For animation dark mode*/
+}
+
 
