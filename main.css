@@ -1,0 +1,182 @@
+* {
+  box-sizing: border-box;
+}
+  body{
+    margin:0;
+    width: 100%;
+    height: auto;
+    background:url(2.jpg) ;
+  }
+
+.menu{
+    top:0;
+    width: 100%;
+    height: auto;
+    background-color: rgb(52, 189, 189);
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+.fixed {
+    top:0;
+    left:0;
+    position: fixed;
+    width: 100%;
+    opacity: 0.9;
+    background-color: rgb(14, 231, 159);
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    /* CSS cho thanh menu khi được cố định */
+}
+.menu ul{
+    list-style: none;
+    text-align: center;
+}
+.menu li{
+    font-size:20px;
+    padding:30px;
+    display: inline-block;
+    color:white;
+}
+.menu li:hover{
+    background-color: rgb(2, 46, 46);
+    color:hwb(180 56% 1%);
+    border-radius: 10px;
+}
+.banner{
+    width: 100%;
+    height: auto;
+    background-repeat:none ;
+    background-position: center;/* canh giua hinh anh anh*/
+ 
+}
+.banner img{
+    width: 100%;
+    height: 600px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+.main {
+    float: left;
+    width: 80%;
+    padding: 0 20px;
+    overflow: hidden;
+ }
+ .sale {
+    background-color: lightblue;
+    float: left;
+    width: 20%;
+    padding: 10px 15px;
+    margin-top: 7px;
+  }
+  .menuitem {
+    padding: 8px;
+    margin-top: 7px;
+    border-bottom: 1px solid #f1f1f1;
+  }
+  .menuitem:hover{
+    background-color: rgb(18, 180, 126);
+    color:azure;
+  }
+  @media only screen and (max-width:800px) {
+    /* For tablets: */
+    .main {
+      width: 80%;
+      padding: 0;
+    }
+    .right {
+      width: 100%;
+    }
+    .banner{
+        width: 100%;
+    }
+     .footer{
+      width: 100%;
+  }
+  }
+  @media only screen and (max-width:500px) {
+    /* For mobile phones: */
+    .sale, .main, .right, .banner, .footer, .top, .bot, .one, .two, .three, .four {
+      width: 100%;
+    }
+  }
+.footer{
+  margin-top:50px;
+  width: 100%;
+  height:auto;
+  background-color: #f0f0f0;
+}
+ .top{
+  width: 100%;
+  height: 150px;
+  background-color: #f0f0f0f0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+ 
+}
+.top h5{
+  width: 15%;
+  padding-left: 30px;
+  background-color: #f1f1f1;
+  float: left;
+}
+.top .giua{
+  width: 55%;
+  float:left;
+  font-size: 50px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  border-bottom: 2px solid #0ae766;
+}
+.top button{
+   margin-right: 20px;
+   border-radius:50% ;
+   height: auto;
+   font-size: 30px;
+   border: none;
+   background-color: yellow;
+}
+ button .bx  {
+  font-size: 20px;
+  padding:25px 15px;
+}
+.footer .bot{
+width: 100%;
+height: auto;
+
+background-color: black;
+color:white;
+display: flex;
+}
+.bot .one{
+ width: 15%;
+ padding-left: 10px;
+ float: left;
+ margin-bottom: 20px;
+}
+.bot .two{
+  width: 25%;
+  padding-left: 20px;
+  float: left;
+  margin-bottom: 20px;
+ }
+ .bot .three{
+  width: 25%;
+  float: left;
+  padding-left: 20px;
+  margin-bottom: 20px;
+ }
+ .bot .four{
+  width: 35%;
+  margin-left: 10px;
+  padding-left: 30px;
+  float: left;
+  margin-bottom: 20px;
+ }
+ .four .icon{
+  margin-top:20px;
+ }
+ .icon .bx{
+  padding:20px;
+  font-size: 20px;
+ }
+ 
+   
+
